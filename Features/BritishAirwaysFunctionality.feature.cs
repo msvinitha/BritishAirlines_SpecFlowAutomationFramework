@@ -116,14 +116,14 @@ namespace BritishAirlines_SpecFlowAutomationFramework.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify user login functionality")]
+        [NUnit.Framework.DescriptionAttribute("Verify user login functionality with invalid credentials")]
         [NUnit.Framework.CategoryAttribute("BritishAirwaysFunctionalities")]
-        public virtual void VerifyUserLoginFunctionality()
+        public virtual void VerifyUserLoginFunctionalityWithInvalidCredentials()
         {
             string[] tagsOfScenario = new string[] {
                     "BritishAirwaysFunctionalities"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify user login functionality", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify user login functionality with invalid credentials", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 12
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -167,7 +167,7 @@ namespace BritishAirlines_SpecFlowAutomationFramework.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify flight booking process", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 18
-     this.ScenarioInitialize(scenarioInfo);
+    this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -194,6 +194,48 @@ namespace BritishAirlines_SpecFlowAutomationFramework.Features
 #line hidden
 #line 21
     testRunner.Then("the user should see available flights and pricing options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verify Hotel booking process")]
+        [NUnit.Framework.CategoryAttribute("BritishAirwaysFunctionalities")]
+        public virtual void VerifyHotelBookingProcess()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "BritishAirwaysFunctionalities"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Hotel booking process", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 24
+     this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 25
+    testRunner.Given("the user is on the British Airways website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 26
+    testRunner.When("the user selects a destination, date, and click Find Hotels button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 27
+    testRunner.Then("the user should see available Hotels and pricing options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

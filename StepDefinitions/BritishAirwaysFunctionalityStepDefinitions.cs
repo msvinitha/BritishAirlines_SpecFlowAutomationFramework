@@ -11,22 +11,24 @@ namespace BritishAirlines_SpecFlowAutomationFramework.StepDefinitions
     [Binding]
     public sealed class BritishAirwaysFunctionalityStepDefinitions
     {
-        private readonly BritishAirwaysPageObject _pageObj;
+        
         private IWebDriver driver;
+        BritishAirwaysPageObject _pageObj;
 
         public BritishAirwaysFunctionalityStepDefinitions(IWebDriver driver)
         {
             
             this.driver = driver;
-            _pageObj = new BritishAirwaysPageObject(this.driver);
         }
+
 
         //Scenario 1  
         [Given(@"the user is on the British Airways website")]
         public void GivenTheUserIsOnTheBritishAirwaysWebsite()
         {
-            _pageObj.Initiate();
-            _pageObj.Navigate("https://www.britishairways.com/travel/home/public/en_gb/");        }
+            _pageObj = new BritishAirwaysPageObject(driver);
+            _pageObj.Initiate();        
+        }
 
         [When(@"the user enters a destination and clicks on the search button")]
         public void WhenTheUserEntersADestinationAndClicksOnTheSearchButton()

@@ -46,14 +46,16 @@ namespace BritishAirlines_SpecFlowAutomationFramework.Hooks
             Console.WriteLine("Running after feature...");
         }
 
-        [BeforeScenario(Order = 1)]
-        public void FirstBeforeScenario(ScenarioContext scenarioContext)
+        [BeforeScenario]
+        public void BeforeScenario(ScenarioContext scenarioContext)
         {
             Console.WriteLine("Running before scenario...");
             new DriverManager().SetUpDriver(new ChromeConfig());
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--start-maximized");
             IWebDriver driver = new ChromeDriver(options);
+            driver.Navigate().GoToUrl("https://www.britishairways.com/travel/home/public/en_gb/");
+            Thread.Sleep(3000);
 
             _container.RegisterInstanceAs<IWebDriver>(driver);
 
@@ -65,11 +67,8 @@ namespace BritishAirlines_SpecFlowAutomationFramework.Hooks
         {
             Console.WriteLine("Running after scenario...");
             var driver = _container.Resolve<IWebDriver>();
+            driver.Quit();
 
-            if (driver != null)
-            {
-                driver.Quit();
-            }
         }
 
         [AfterStep]

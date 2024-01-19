@@ -10,7 +10,7 @@ namespace BritishAirlines_SpecFlowAutomationFramework.StepDefinitions
     [Binding]
     public sealed class BritishAirwaysNavigationsStepDefinitions
     {
-        private readonly BritishAirwaysPageObject _page;
+        private BritishAirwaysPageObject _page;
         private IWebDriver driver;
 
         public BritishAirwaysNavigationsStepDefinitions(IWebDriver driver)
@@ -18,25 +18,6 @@ namespace BritishAirlines_SpecFlowAutomationFramework.StepDefinitions
 
             this.driver = driver;
             _page = new BritishAirwaysPageObject(this.driver);
-        }
-
-        //Scenario 1 
-        [Given(@"the user is on the Browser")]
-        public void GivenTheUserIsOnTheBrowser()
-        {
-            _page.Initiate();
-        }
-
-        [When(@"the user navigates to URL ""([^""]*)""")]
-        public void WhenTheUserNavigatesToURL(string p0)
-        {
-            _page.Navigate(p0);
-        }
-
-        [Then(@"the user should be on the home page and title should be ""([^""]*)""")]
-        public void ThenTheUserShouldBeOnTheHomePageAndTitleShouldBe(string p0)
-        {
-            _page.AssertTitle(p0);
         }
 
         //Scenario 2

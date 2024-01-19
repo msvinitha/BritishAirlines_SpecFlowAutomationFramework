@@ -74,50 +74,6 @@ namespace BritishAirlines_SpecFlowAutomationFramework.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify navigation to the British Airways Website")]
-        [NUnit.Framework.CategoryAttribute("BritishAirwaysNavigations")]
-        public virtual void VerifyNavigationToTheBritishAirwaysWebsite()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "BritishAirwaysNavigations"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify navigation to the British Airways Website", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 6
-  this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 7
-    testRunner.Given("the user is on the Browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 8
-    testRunner.When("the user navigates to URL \"https://www.britishairways.com/travel/home/public/en_g" +
-                        "b/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 9
-    testRunner.Then("the user should be on the home page and title should be \"British Airways | Book F" +
-                        "lights, Holidays, City Breaks & Check In Online\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify navigation to the Main Menu Discover")]
         [NUnit.Framework.CategoryAttribute("BritishAirwaysNavigations")]
         public virtual void VerifyNavigationToTheMainMenuDiscover()
@@ -126,7 +82,7 @@ namespace BritishAirlines_SpecFlowAutomationFramework.Features
                     "BritishAirwaysNavigations"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify navigation to the Main Menu Discover", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 13
+#line 7
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -146,13 +102,13 @@ namespace BritishAirlines_SpecFlowAutomationFramework.Features
             else
             {
                 this.ScenarioStart();
-#line 14
+#line 8
     testRunner.Given("the user is on the British Airways home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 15
+#line 9
     testRunner.When("the user selects main menus \"Discover\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 16
+#line 10
     testRunner.Then("the user should be able to see the sublinks under Discover", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -168,6 +124,48 @@ namespace BritishAirlines_SpecFlowAutomationFramework.Features
                     "BritishAirwaysNavigations"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify navigation to the Main Menu Book", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 14
+  this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 15
+    testRunner.Given("the user is on the British Airways home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 16
+    testRunner.When("the user selects main menus \"Book\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 17
+    testRunner.Then("the user should be able to see the sublinks under Book", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verify navigation to the Main Menu Manage")]
+        [NUnit.Framework.CategoryAttribute("BritishAirwaysNavigations")]
+        public virtual void VerifyNavigationToTheMainMenuManage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "BritishAirwaysNavigations"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify navigation to the Main Menu Manage", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 20
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -192,24 +190,24 @@ namespace BritishAirlines_SpecFlowAutomationFramework.Features
     testRunner.Given("the user is on the British Airways home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 22
-    testRunner.When("the user selects main menus \"Book\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("the user selects main menus \"Manage\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 23
-    testRunner.Then("the user should be able to see the sublinks under Book", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("the user should be able to see the sublinks under Manage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify navigation to the Main Menu Manage")]
+        [NUnit.Framework.DescriptionAttribute("Verify navigation to the Main Menu Help")]
         [NUnit.Framework.CategoryAttribute("BritishAirwaysNavigations")]
-        public virtual void VerifyNavigationToTheMainMenuManage()
+        public virtual void VerifyNavigationToTheMainMenuHelp()
         {
             string[] tagsOfScenario = new string[] {
                     "BritishAirwaysNavigations"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify navigation to the Main Menu Manage", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify navigation to the Main Menu Help", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 26
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -234,51 +232,9 @@ namespace BritishAirlines_SpecFlowAutomationFramework.Features
     testRunner.Given("the user is on the British Airways home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 28
-    testRunner.When("the user selects main menus \"Manage\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 29
-    testRunner.Then("the user should be able to see the sublinks under Manage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify navigation to the Main Menu Help")]
-        [NUnit.Framework.CategoryAttribute("BritishAirwaysNavigations")]
-        public virtual void VerifyNavigationToTheMainMenuHelp()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "BritishAirwaysNavigations"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify navigation to the Main Menu Help", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 32
-  this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 33
-    testRunner.Given("the user is on the British Airways home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 34
     testRunner.When("the user selects main menus \"Help\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 35
+#line 29
     testRunner.Then("the user should be able to see the sublinks under Help", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

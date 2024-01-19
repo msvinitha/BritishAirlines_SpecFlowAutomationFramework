@@ -52,22 +52,12 @@ namespace BritishAirlines_SpecFlowAutomationFramework.POM
 
         public void Initiate()
         {
-            //    new DriverManager().SetUpDriver(new ChromeConfig());
-            //ChromeOptions options = new ChromeOptions();
-            //options.AddArguments("--start-maximized");
-            //    _webDriver = new ChromeDriver(options);
-        }
-
-        public void Navigate(string url)
-        {
-            _webDriver.Navigate().GoToUrl(url);
-            Thread.Sleep(3000);
-            //if (CookieAcceptButton.Enabled)
-            //{
-            //    CookieAcceptButton.Click();
-            //}
-            //Thread.Sleep(4000);
-            //Assert.AreEqual(LanguageSelection.Displayed, true);
+            if (CookieAcceptButton.Displayed)
+            {
+                CookieAcceptButton.Click();
+            }
+            Thread.Sleep(4000);
+            Assert.AreEqual(LanguageSelection.Displayed, true);
         }
 
         public void AssertTitle(string title)
